@@ -1,0 +1,36 @@
+﻿<div class="page-container">
+  <div class="container">
+    <div class="header-section">
+      <h1>आधुनिक जीवनासाठी उच्च दर्जाचे फर्निचर</h1>
+      <p>बेड, दिवाण, सोफा, टिपॉय, टेबल आणि बरेच काही यांचा काळजीपूर्वक निवडलेला संग्रह शोधा.</p>
+      <div class="header-buttons">
+        <a href="tel:+919970760160" class="btn btn-call">
+          <i class="fas fa-phone"></i> आता कॉल करा
+        </a>
+        <a href="https://wa.me/+919970760160" class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <div class="product" *ngFor="let product of products">
+        <img [src]="product.image" [alt]="product.name">
+        <div class="product-info">
+          <h2>{{ product.name }}</h2>
+          <span class="product-badge">उपलब्ध</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/+919970760160" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Call Float -->
+<a href="tel:+919970760160" class="call-float">
+  <i class="fas fa-phone"></i>
+</a>

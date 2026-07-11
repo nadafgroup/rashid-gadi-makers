@@ -1,0 +1,708 @@
+﻿/* ========================================
+   NAVBAR - Logo Left, Menu Right
+   ======================================== */
+.navbar {
+  background: #1a3a5c;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-brand .logo-img {
+  height: 40px;
+}
+
+.navbar-brand .brand-highlight {
+  color: #6ab0e6;
+}
+
+/* Right Side */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6ab0e6;
+  transition: width 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #fff;
+}
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 90, 36, 0.4);
+  color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1a3a5c;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.mobile-menu ul li a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mobile-menu ul li a:hover {
+  color: #fff;
+}
+
+.mobile-call {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+  padding: 12px !important;
+  border-radius: 50px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 992px) {
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+}
+
+@media (min-width: 993px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1a3a5c, #061a26);
+  padding-top: 80px;
+}
+
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* Gradient Text with Full Browser Compatibility */
+.hero h1 span {
+  background: linear-gradient(135deg, #6ab0e6, #4a90c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for older browsers */
+}
+
+.hero p {
+  font-size: 20px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2c5f8a, #4a90c4);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(44, 95, 138, 0.4);
+}
+
+.btn-call {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-call:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(238, 90, 36, 0.4);
+  color: #fff;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .num {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  color: #6ab0e6;
+}
+
+.stat .label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ========================================
+   SERVICES
+   ======================================== */
+.services {
+  padding: 60px 0;
+  background: #f0f4f8;
+}
+
+.services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1a3a5c;
+  margin-bottom: 40px;
+}
+
+.services h2 span {
+  color: #2c5f8a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.service-card .icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #2c5f8a, #4a90c4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.service-card h3 {
+  color: #1a3a5c;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.service-card a {
+  color: #2c5f8a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ========================================
+   ABOUT
+   ======================================== */
+.about {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #1a3a5c;
+  margin-bottom: 16px;
+}
+
+.about-text h2 span {
+  color: #2c5f8a;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   CONTACT
+   ======================================== */
+.contact {
+  padding: 60px 0;
+  background: #f0f4f8;
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1a3a5c;
+  margin-bottom: 40px;
+}
+
+.contact h2 span {
+  color: #2c5f8a;
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.contact-item .icon {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #2c5f8a, #4a90c4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-item h4 {
+  color: #1a3a5c;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-item a {
+  color: #555;
+  text-decoration: none;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.contact-form h3 {
+  color: #1a3a5c;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2c5f8a;
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2c5f8a, #4a90c4);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(44, 95, 138, 0.4);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: #1a3a5c;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ========================================
+   FLOATING BUTTONS
+   ======================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(37,211,102,0.4);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.call-float {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(238,90,36,0.4);
+  transition: 0.3s;
+}
+
+.call-float:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background: #1a3a5c;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 998;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================
+   RESPONSIVE (Mobile)
+   ======================================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat .num {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .navbar-brand .logo-img {
+    height: 30px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-call {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .call-float {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    bottom: 80px;
+    right: 20px;
+  }
+}

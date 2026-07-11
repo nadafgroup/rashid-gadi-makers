@@ -1,0 +1,170 @@
+﻿<!-- WhatsApp Float -->
+<a href="https://wa.me/+919970760160" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Call Float -->
+<a href="tel:+919970760160" class="call-float">
+  <i class="fas fa-phone"></i>
+</a>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" (click)="scrollToTop()" *ngIf="showScroll">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="container">
+    <!-- Logo Left -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/logo2.png" alt="Logo" class="logo-img">
+      <span>रशिद <span class="brand-highlight">गादी मेकर्स</span></span>
+    </a>
+
+    <!-- Right Side - Desktop -->
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a (click)="scrollTo('home')">मुख्यपृष्ठ</a></li>
+        <li><a (click)="scrollTo('services')">सेवा</a></li>
+        <li><a (click)="scrollTo('about')">आमच्याबद्दल</a></li>
+        <li><a (click)="scrollTo('contact')">संपर्क</a></li>
+      </ul>
+      <a href="tel:+919970760160" class="call-btn">
+        <i class="fas fa-phone"></i> कॉल करा
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <ul>
+      <li><a (click)="scrollTo('home')">मुख्यपृष्ठ</a></li>
+      <li><a (click)="scrollTo('services')">सेवा</a></li>
+      <li><a (click)="scrollTo('about')">आमच्याबद्दल</a></li>
+      <li><a (click)="scrollTo('contact')">संपर्क</a></li>
+      <li><a href="tel:+919970760160" class="mobile-call">कॉल करा</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Welcome to <span>Rashid Gadi Makers</span></h1>
+    <p>प्रीमियम गाद्या आणि उशांसाठी तुमचे एकमेव ठिकाण.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" (click)="scrollTo('services')">
+        <i class="fas fa-bed"></i> आमच्या सेवा
+      </button>
+      <a href="tel:+919970760160" class="btn-call">
+        <i class="fas fa-phone"></i> आता कॉल करा
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="num">45+</span>
+        <span class="label">वर्षे अनुभव</span>
+      </div>
+      <div class="stat">
+        <span class="num">1000+</span>
+        <span class="label">समाधानी ग्राहक</span>
+      </div>
+      <div class="stat">
+        <span class="num">100%</span>
+        <span class="label">गुणवत्ता हमी</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="services">
+  <div class="container">
+    <h2>आमच्या <span>सेवा</span></h2>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="icon"><i [class]="'fas ' + service.icon"></i></div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.desc }}</p>
+        <a [routerLink]="service.link">अधिक माहिती →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-text">
+        <h2>आम्ही कोण <span>आहोत?</span></h2>
+        <p>
+          <strong>रशिद गादी मेकर्स</strong> येथे आम्ही <strong>१९८०</strong> पासून उच्च दर्जाच्या गाद्या आणि फर्निचर बनवत आहोत. 
+          आमचे ध्येय प्रीमियम बेडिंग सोल्यूशन्सद्वारे आमच्या ग्राहकांना आराम आणि आधार प्रदान करणे आहे.
+        </p>
+        <p>महाराष्ट्रातील नांदणी येथे स्थित, आम्हाला थेट विक्री आणि भाडे सेवा दोन्ही ऑफर करण्याचा अभिमान आहे.</p>
+      </div>
+      <div class="about-img">
+        <img src="assets/img/about.jpg" alt="About">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>संपर्क <span>करा</span></h2>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>फोन</h4>
+            <a href="tel:+919970760160">+91 9970760160</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>ई-मेल</h4>
+            <a href="mailto:rashidgadimakers&#64;gmail.com">rashidgadimakers&#64;gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>पत्ता</h4>
+            <a href="https://maps.app.goo.gl/m8q8q5HykzyQH5MR8" target="_blank">नांदणी, महाराष्ट्र</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>संदेश पाठवा</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="apikey" value="6542ae57-249f-4950-9753-bf0288999d5a">
+          <input type="text" name="name" placeholder="तुमचे नाव" required>
+          <input type="email" name="email" placeholder="ई-मेल" required>
+          <input type="tel" name="phone" placeholder="फोन नंबर" maxlength="10" required>
+          <textarea name="message" placeholder="तुमचा संदेश" rows="4" required></textarea>
+          <button type="submit">संदेश पाठवा</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© {{ currentYear }} रशिद गादी मेकर्स. सर्व हक्क राखीव.</p>
+  </div>
+</footer>

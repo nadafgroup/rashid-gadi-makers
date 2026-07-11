@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+﻿/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+  background: #f4f4f9;
+  color: #2c3e50;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a3a5c; }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(135deg, #2c5f8a, #4a90c4);
+  border-radius: 5px;
+}
+
+::selection {
+  background: #2c5f8a;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
