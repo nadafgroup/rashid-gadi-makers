@@ -8,21 +8,19 @@
   <i class="fas fa-phone"></i>
 </a>
 
-<!-- Scroll to Top -->
-<button class="scroll-top" (click)="scrollToTop()" *ngIf="showScroll">
+<!-- Scroll to Top - Move Up Button -->
+<button class="scroll-top-btn" (click)="scrollToTop()" *ngIf="showScroll">
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar">
+<!-- Navigation -->
+<nav class="navbar" [class.navbar-scrolled]="isScrolled">
   <div class="container">
-    <!-- Logo Left -->
     <a class="navbar-brand" href="#">
-      <img src="assets/img/logo2.png" alt="Logo" class="logo-img">
+      <img src="assets/img/logo2.png" alt="रशिद गादी मेकर्स" class="logo-img">
       <span>रशिद <span class="brand-highlight">गादी मेकर्स</span></span>
     </a>
 
-    <!-- Right Side - Desktop -->
     <div class="nav-right">
       <ul class="nav-menu">
         <li><a (click)="scrollTo('home')">मुख्यपृष्ठ</a></li>
@@ -35,7 +33,6 @@
       </a>
     </div>
 
-    <!-- Hamburger -->
     <button class="hamburger" (click)="toggleMenu()">
       <span></span>
       <span></span>
@@ -43,7 +40,6 @@
     </button>
   </div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" [class.open]="isMenuOpen">
     <ul>
       <li><a (click)="scrollTo('home')">मुख्यपृष्ठ</a></li>
@@ -55,7 +51,7 @@
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- Hero Section -->
 <section id="home" class="hero">
   <div class="container">
     <h1>Welcome to <span>Rashid Gadi Makers</span></h1>
@@ -85,7 +81,7 @@
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
+<!-- Services Section -->
 <section id="services" class="services">
   <div class="container">
     <h2>आमच्या <span>सेवा</span></h2>
@@ -100,7 +96,7 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- About Section -->
 <section id="about" class="about">
   <div class="container">
     <div class="about-wrap">
@@ -119,7 +115,7 @@
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="container">
     <h2>संपर्क <span>करा</span></h2>
@@ -143,7 +139,12 @@
           <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
             <h4>पत्ता</h4>
-            <a href="https://maps.app.goo.gl/m8q8q5HykzyQH5MR8" target="_blank">नांदणी, महाराष्ट्र</a>
+            <a href="https://maps.app.goo.gl/m8q8q5HykzyQH5MR8" target="_blank">
+              रशिद गादी मेकर्स,<br>
+              नांदणी, ता. शिरोळ,<br>
+              जि. कोल्हापूर,<br>
+              <strong>महाराष्ट्र</strong> - 416102
+            </a>
           </div>
         </div>
       </div>
@@ -162,7 +163,7 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <p>© {{ currentYear }} रशिद गादी मेकर्स. सर्व हक्क राखीव.</p>
